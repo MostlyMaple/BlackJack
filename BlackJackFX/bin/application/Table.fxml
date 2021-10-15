@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #35654d;">
+         <children>
+            <ImageView fx:id="table" fitHeight="648.0" fitWidth="900.0" layoutX="-3.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="1.3">
+               <image>
+                  <Image url="@../backs/table.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="hitBtn" layoutX="571.0" layoutY="536.0" mnemonicParsing="false" onAction="#hitUser" prefHeight="50.0" prefWidth="83.0" style="-fx-background-color: #7892c2; -fx-border-color: black; -fx-border-radius: 10px; -fx-background-insets: 1px; -fx-background-radius: 10;" text="Hit">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font></Button>
+            <Button fx:id="stayBtn" layoutX="685.0" layoutY="536.0" mnemonicParsing="false" onAction="#stayUser" prefHeight="50.0" prefWidth="83.0" style="-fx-background-color: #f54242; -fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-insets: 1;" text="Stay">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font></Button>
+            <Label fx:id="userTotalLbl" layoutX="18.0" layoutY="536.0" text="User Total:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="dealerCard1" fitHeight="90.0" fitWidth="61.0" layoutX="406.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard0" fitHeight="90.0" fitWidth="61.0" layoutX="331.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard2" fitHeight="90.0" fitWidth="61.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard3" fitHeight="90.0" fitWidth="61.0" layoutX="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard4" fitHeight="90.0" fitWidth="61.0" layoutX="203.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard5" fitHeight="90.0" fitWidth="61.0" layoutX="270.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard10" fitHeight="90.0" fitWidth="61.0" layoutX="604.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard8" fitHeight="90.0" fitWidth="61.0" layoutX="471.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard11" fitHeight="90.0" fitWidth="61.0" layoutX="670.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard9" fitHeight="90.0" fitWidth="61.0" layoutX="537.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard7" fitHeight="90.0" fitWidth="61.0" layoutX="404.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard6" fitHeight="90.0" fitWidth="61.0" layoutX="337.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="20.0" layoutY="574.0" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #35654d; -fx-border-color: white; -fx-border-radius: 20px; -fx-border-width: 3;">
+               <children>
+                  <Button fx:id="startBtn" layoutX="413.0" layoutY="145.0" mnemonicParsing="false" onAction="#startGame" prefHeight="41.0" prefWidth="73.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-insets: 1;" text="Bet">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="manualBet" layoutX="22.0" layoutY="153.0" />
+                  <Button fx:id="customBtn" layoutX="190.0" layoutY="153.0" mnemonicParsing="false" onAction="#betCustom" text="Enter" />
+                  <Button layoutX="33.0" layoutY="14.0" mnemonicParsing="false" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../chips/pokerchip1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="147.0" layoutY="14.0" mnemonicParsing="false" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../chips/pokerchip1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children></AnchorPane>
+            <Label fx:id="wagerLbl" layoutX="567.0" layoutY="606.0" prefHeight="60.0" prefWidth="175.0" text="Wager:">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="balanceLbl" layoutX="567.0" layoutY="685.0" text="Balance:">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="bustLbl" layoutX="180.0" layoutY="140.0" prefHeight="207.0" prefWidth="489.0" style="visibility: hidden;" text="You Busted!">
+               <font>
+                  <Font name="Arial Bold" size="74.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="userCard0" fitHeight="90.0" fitWidth="61.0" layoutX="364.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard1" fitHeight="90.0" fitWidth="61.0" layoutX="379.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard2" fitHeight="90.0" fitWidth="61.0" layoutX="399.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard3" fitHeight="90.0" fitWidth="61.0" layoutX="419.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard4" fitHeight="90.0" fitWidth="61.0" layoutX="484.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard5" fitHeight="90.0" fitWidth="61.0" layoutX="504.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard6" fitHeight="90.0" fitWidth="61.0" layoutX="524.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard7" fitHeight="90.0" fitWidth="61.0" layoutX="544.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard8" fitHeight="90.0" fitWidth="61.0" layoutX="244.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard9" fitHeight="90.0" fitWidth="61.0" layoutX="264.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard10" fitHeight="90.0" fitWidth="61.0" layoutX="284.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard11" fitHeight="90.0" fitWidth="61.0" layoutX="304.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@Classic/c01.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="dealerTotalLbl" layoutX="20.0" layoutY="495.0" text="Dealer Total:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
