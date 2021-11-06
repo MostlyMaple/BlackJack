@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.BlackJackController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #35654d;">
+         <children>
+            <ImageView fx:id="table" fitHeight="648.0" fitWidth="900.0" layoutX="-3.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="1.3">
+               <image>
+                  <Image url="@../../BlackJackImages/table.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="hitBtn" layoutX="557.0" layoutY="602.0" mnemonicParsing="false" onAction="#hitUser" prefHeight="50.0" prefWidth="83.0" style="-fx-background-color: #7892c2; -fx-border-color: black; -fx-border-radius: 10px; -fx-background-insets: 1px; -fx-background-radius: 10;" text="Hit">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font></Button>
+            <Button fx:id="stayBtn" layoutX="676.0" layoutY="602.0" mnemonicParsing="false" onAction="#stayUser" prefHeight="50.0" prefWidth="83.0" style="-fx-background-color: #f54242; -fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-insets: 1;" text="Stay">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font></Button>
+            <Label fx:id="userTotalLbl" layoutX="18.0" layoutY="544.0" text="User Total:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="dealerCard1" fitHeight="90.0" fitWidth="61.0" layoutX="406.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard0" fitHeight="90.0" fitWidth="61.0" layoutX="331.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard2" fitHeight="90.0" fitWidth="61.0" layoutX="69.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard3" fitHeight="90.0" fitWidth="61.0" layoutX="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard4" fitHeight="90.0" fitWidth="61.0" layoutX="203.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard5" fitHeight="90.0" fitWidth="61.0" layoutX="270.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard10" fitHeight="90.0" fitWidth="61.0" layoutX="604.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard8" fitHeight="90.0" fitWidth="61.0" layoutX="471.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard11" fitHeight="90.0" fitWidth="61.0" layoutX="670.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard9" fitHeight="90.0" fitWidth="61.0" layoutX="537.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard7" fitHeight="90.0" fitWidth="61.0" layoutX="404.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dealerCard6" fitHeight="90.0" fitWidth="61.0" layoutX="337.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="20.0" layoutY="574.0" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #35654d; -fx-border-color: white; -fx-border-radius: 20px; -fx-border-width: 3;">
+               <children>
+                  <Button fx:id="startBtn" layoutX="413.0" layoutY="145.0" mnemonicParsing="false" onAction="#startGame" prefHeight="41.0" prefWidth="73.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-insets: 1;" text="Bet">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="manualBet" layoutX="22.0" layoutY="153.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                  <Button fx:id="customBtn" layoutX="171.0" layoutY="153.0" mnemonicParsing="false" onAction="#betCustom" style="-fx-background-color: white; -fx-border-color: black; -fx-background-insets: 1;" text="Enter" />
+                  <Button fx:id="betOneBtn" layoutX="33.0" layoutY="15.0" mnemonicParsing="false" onAction="#betOne" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="betFiveBtn" layoutX="160.0" layoutY="15.0" mnemonicParsing="false" onAction="#betFive" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="betTwentyFiveBtn" layoutX="295.0" layoutY="15.0" mnemonicParsing="false" onAction="#betTwentyFive" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="betHundredBtn" layoutX="420.0" layoutY="15.0" mnemonicParsing="false" onAction="#betHundred" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="betTenPerBtn" layoutX="33.0" layoutY="88.0" mnemonicParsing="false" onAction="#betTenPer" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="betTwentyPerBtn" layoutX="160.0" layoutY="88.0" mnemonicParsing="false" onAction="#betTwentyPer" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip20.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="betFiftyPerBtn" layoutX="295.0" layoutY="88.0" mnemonicParsing="false" onAction="#betFiftyPer" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="betHundredPerBtn" layoutX="420.0" layoutY="88.0" mnemonicParsing="false" onAction="#betHundredPer" style="-fx-padding: 0; -fx-focus-color: transparent; -fx-border-style: none; -fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="130.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../BlackJackImages/pokerchip40.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children></AnchorPane>
+            <Label fx:id="wagerLbl" layoutX="542.0" layoutY="674.0" prefHeight="60.0" prefWidth="175.0" text="Wager:">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="balanceLbl" layoutX="541.0" layoutY="738.0" text="Balance:">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="userCard0" fitHeight="90.0" fitWidth="61.0" layoutX="364.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard1" fitHeight="90.0" fitWidth="61.0" layoutX="379.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard2" fitHeight="90.0" fitWidth="61.0" layoutX="399.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard3" fitHeight="90.0" fitWidth="61.0" layoutX="419.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard4" fitHeight="90.0" fitWidth="61.0" layoutX="484.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard5" fitHeight="90.0" fitWidth="61.0" layoutX="504.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard6" fitHeight="90.0" fitWidth="61.0" layoutX="524.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard7" fitHeight="90.0" fitWidth="61.0" layoutX="544.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard8" fitHeight="90.0" fitWidth="61.0" layoutX="244.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard9" fitHeight="90.0" fitWidth="61.0" layoutX="264.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard10" fitHeight="90.0" fitWidth="61.0" layoutX="284.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userCard11" fitHeight="90.0" fitWidth="61.0" layoutX="304.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" style="visibility: hidden;">
+               <image>
+                  <Image url="@../../BlackJackImages/c01.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="dealerTotalLbl" layoutX="18.0" layoutY="514.0" text="Dealer Total:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="bustLbl" alignment="CENTER" layoutX="66.0" layoutY="308.0" prefHeight="207.0" prefWidth="669.0" style="visibility: hidden;" text="You Win!" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="87.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
