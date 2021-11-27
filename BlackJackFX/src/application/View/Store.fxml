@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="414.0" prefWidth="597.0" style="-fx-background-color: green; -fx-border-color: #DEB887;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.StoreController">
+   <children>
+      <Label layoutX="255.0" layoutY="18.0" prefHeight="62.0" prefWidth="130.0" text="Store">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="mainMenuButton" layoutX="478.0" layoutY="15.0" mnemonicParsing="false" text="Main Menu">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="totalBalanceText" layoutX="14.0" layoutY="15.0" prefHeight="34.0" prefWidth="194.0" style="-fx-control-inner-background: #DEB887;">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></TextArea>
+      <Label layoutX="498.0" layoutY="231.0" prefHeight="62.0" prefWidth="48.0" text="\$100" textFill="WHITE">
+         <font>
+            <Font name="Didot Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="231.0" prefHeight="62.0" prefWidth="41.0" text="\$400" textFill="WHITE">
+         <font>
+            <Font name="Didot Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="231.0" prefHeight="62.0" prefWidth="41.0" text="\$200" textFill="WHITE">
+         <font>
+            <Font name="Didot Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="231.0" prefHeight="62.0" prefWidth="41.0" text="\$500" textFill="WHITE">
+         <font>
+            <Font name="Didot Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmBuyButton" layoutX="273.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: lightgreen;" text="Confirm buy">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <HBox layoutX="163.0" layoutY="118.0" prefHeight="116.0" prefWidth="147.0">
+         <children>
+            <ImageView fx:id="tree" fitHeight="129.0" fitWidth="123.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/minitree.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="22.0" layoutY="121.0" prefHeight="130.0" prefWidth="137.0">
+         <children>
+            <ImageView fx:id="dog" fitHeight="129.0" fitWidth="116.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/minidog.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="299.0" layoutY="122.0" prefHeight="116.0" prefWidth="130.0">
+         <children>
+            <ImageView fx:id="monkey" fitHeight="114.0" fitWidth="116.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/minimonkey.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="451.0" layoutY="125.0" prefHeight="104.0" prefWidth="121.0">
+         <children>
+            <ImageView fx:id="food" fitHeight="111.0" fitWidth="110.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/minifood.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <TextArea fx:id="confirmBuyText" layoutX="176.0" layoutY="293.0" prefHeight="47.0" prefWidth="289.0" style="-fx-control-inner-background: #DEB887; -fx-border-color: green;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="236.0" layoutY="80.0" prefHeight="22.0" prefWidth="169.0" text="Click Image to buy!" textFill="#f2eded">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
