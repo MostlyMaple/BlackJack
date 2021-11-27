@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 public class Main extends Application {
 	
 	
-	public static int balance = 1000;
+	public static int balance;
 	
 	@Override
 	public void start(Stage primaryStage) {

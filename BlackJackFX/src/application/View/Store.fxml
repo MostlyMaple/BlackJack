@@ -52,7 +52,7 @@
          <children>
             <ImageView fx:id="tree" fitHeight="129.0" fitWidth="123.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/minitree.png" />
+                  <Image url="@../../BlackJackImages/minitree.png" />
                </image>
             </ImageView>
          </children>
@@ -61,7 +61,7 @@
          <children>
             <ImageView fx:id="dog" fitHeight="129.0" fitWidth="116.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/minidog.png" />
+                  <Image url="@../../BlackJackImages/minidog.png" />
                </image>
             </ImageView>
          </children>
@@ -70,7 +70,7 @@
          <children>
             <ImageView fx:id="monkey" fitHeight="114.0" fitWidth="116.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/minimonkey.png" />
+                  <Image url="@../../BlackJackImages/minimonkey.png" />
                </image>
             </ImageView>
          </children>
@@ -79,7 +79,7 @@
          <children>
             <ImageView fx:id="food" fitHeight="111.0" fitWidth="110.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/minifood.png" />
+                  <Image url="@../../BlackJackImages/minifood.png" />
                </image>
             </ImageView>
          </children>
