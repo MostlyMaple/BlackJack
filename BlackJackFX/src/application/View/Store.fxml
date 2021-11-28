@@ -14,7 +14,7 @@
             <Font name="Arial Rounded MT Bold" size="48.0" />
          </font>
       </Label>
-      <Button fx:id="mainMenuButton" layoutX="478.0" layoutY="15.0" mnemonicParsing="false" text="Main Menu">
+      <Button fx:id="mainMenuButton" layoutX="478.0" layoutY="15.0" mnemonicParsing="false" onAction="#mainMenuHandle" text="Main Menu">
          <font>
             <Font name="Arial Rounded MT Bold" size="16.0" />
          </font>

@@ -1,9 +1,10 @@
 package application.Controllers;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -160,16 +161,16 @@ public class StoreController implements Initializable {
     	}
     	
     }
-   /* @FXML
-    void mainMenuHandle(ActionEvent event) {
-    	URL url = new File("src/application.View/MainMenu.fxml");
+    @FXML
+    void mainMenuHandle(ActionEvent event) throws IOException {
+    	URL url = new File("src/application/View/MainMenu.fxml").toURI().toURL();
     	AnchorPane mainPane = FXMLLoader.load(url);
     	Scene scene = new Scene(mainPane);
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);
     	window.show();
 
-    }*/
+    }
 
 
 

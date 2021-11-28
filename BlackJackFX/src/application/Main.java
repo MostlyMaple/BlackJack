@@ -10,12 +10,12 @@ import javafx.scene.layout.AnchorPane;
 public class Main extends Application {
 	
 	
-	public static int balance;
+	public static int balance = 1000;
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/View/BlackJack.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/View/MainMenu.fxml"));
 			Scene scene = new Scene(root,800,800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);

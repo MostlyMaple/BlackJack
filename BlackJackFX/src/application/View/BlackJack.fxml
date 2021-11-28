@@ -250,6 +250,11 @@
                   <Font name="Arial Bold" size="87.0" />
                </font>
             </Label>
+            <Button fx:id="backB" layoutX="733.0" layoutY="763.0" mnemonicParsing="false" onAction="#BackToMainMenu" text="Quit">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

@@ -1,15 +1,23 @@
 package application.Controllers;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import application.Main;
 import application.Models.BlackJack;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class BlackJackController {
 	
@@ -148,6 +156,9 @@ public class BlackJackController {
     
     @FXML
     private Button betHundredPerBtn;
+    
+    @FXML
+    private AnchorPane mainPane;
     
     @FXML
     public void initialize() {
@@ -559,6 +570,17 @@ public class BlackJackController {
     	}
     }
 
+    @FXML
+    void BackToMainMenu(ActionEvent event) throws IOException {
+		URL url = new File("src/application/View/MainMenu.fxml").toURI().toURL();
+		mainPane = FXMLLoader.load(url);
+		Scene scene = new Scene(mainPane);
+		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		boolean isFullscreen = window.isFullScreen();
+		window.setScene(scene);
+		window.setFullScreen(isFullscreen);
+		window.show();
+    }  
 }
 
 
