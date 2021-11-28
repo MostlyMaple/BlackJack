@@ -86,7 +86,7 @@ public class AchieveController implements Initializable {
 		
 		// load the role view
 		FXMLLoader loader = new FXMLLoader();
-		URL url = getClass().getResource("/application/View/BlackJack.fxml");
+		URL url = getClass().getResource("/application/View/MainMenu.fxml");
 		loader.setLocation(url);
 		blackJack = loader.load();
         Scene scene = new Scene(blackJack);
@@ -222,6 +222,7 @@ public class AchieveController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		ticketNum.setText(String.valueOf(Main.ticket));
+		balance.setText(String.valueOf(Main.balance));
 		notes.setText(Main.buff);
 		ck1500.setDisable(true);
 		ck2000.setDisable(true);

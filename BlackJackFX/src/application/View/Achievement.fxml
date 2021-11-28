@@ -1,8 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.AchieveController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#337c38" height="800.0" stroke="BLACK" strokeType="INSIDE" width="230.0" />
+      <ImageView fitHeight="164.0" fitWidth="164.0" layoutX="34.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../AchieveImages/Logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="raffleBt" blendMode="SCREEN" layoutX="34.0" layoutY="640.0" mnemonicParsing="false" onAction="#raffleSwitch" onMouseEntered="#showInfor" onMouseExited="#disableInfor" prefHeight="51.0" prefWidth="164.0" text="Raffle " textFill="#0d3208">
+         <font>
+            <Font name="Georgia Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button blendMode="SCREEN" layoutX="34.0" layoutY="711.0" mnemonicParsing="false" onAction="#backSwitch" prefHeight="51.0" prefWidth="164.0" text="Back" textFill="#0d3208">
+         <font>
+            <Font name="Georgia Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Text fx:id="Title" cacheHint="SPEED" fill="#ff9300" layoutX="200.0" layoutY="60.0" stroke="#070707" text="Achievement List" textAlignment="CENTER" wrappingWidth="600.0">
+         <font>
+            <Font name="Georgia Bold" size="36.0" />
+         </font>
+         <effect>
+            <Reflection fraction="1.0" topOpacity="0.22" />
+         </effect>
+      </Text>
+      <Text layoutX="16.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Balance" textAlignment="CENTER" underline="true" wrappingWidth="200.0">
+         <font>
+            <Font name="Georgia Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="balance" layoutX="16.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-1" textAlignment="CENTER" wrappingWidth="200.0">
+         <font>
+            <Font name="Georgia Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="15.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Ticket" textAlignment="CENTER" underline="true" wrappingWidth="200.0">
+         <font>
+            <Font name="Georgia Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="ticketNum" layoutX="16.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="200.0">
+         <font>
+            <Font name="Georgia Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="150.0" layoutX="258.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="150.0" layoutX="258.0" layoutY="282.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="150.0" layoutX="258.0" layoutY="625.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="150.0" layoutX="258.0" layoutY="451.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <ImageView fx:id="lock1" fitHeight="60.0" fitWidth="60.0" layoutX="264.0" layoutY="153.0" onMouseClicked="#CheckLock1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../AchieveImages/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lock2" fitHeight="60.0" fitWidth="60.0" layoutX="264.0" layoutY="331.0" onMouseClicked="#CheckLock2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../AchieveImages/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lock3" fitHeight="60.0" fitWidth="60.0" layoutX="264.0" layoutY="496.0" onMouseClicked="#CheckLock3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../AchieveImages/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lock4" fitHeight="60.0" fitWidth="60.0" layoutX="264.0" layoutY="670.0" onMouseClicked="#CheckLock4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../AchieveImages/lock.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="325.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Become a Rookie Card Player" textAlignment="CENTER" wrappingWidth="350.0">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="ck1500" layoutX="337.0" layoutY="160.0" mnemonicParsing="false" text="Money reach $1500">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tk3" layoutX="337.0" layoutY="195.0" mnemonicParsing="false" text="Use 3 Tickets">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tk5" layoutX="337.0" layoutY="378.0" mnemonicParsing="false" text="Use 5 Tickets">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="ck2000" layoutX="337.0" layoutY="343.0" mnemonicParsing="false" text="Money reach $2000">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <Text layoutX="325.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Why are you so rich?" textAlignment="CENTER" wrappingWidth="350.0">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="rf1" layoutX="559.0" layoutY="346.0" mnemonicParsing="false" text="Play Raffle">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="rf5" layoutX="559.0" layoutY="516.0" mnemonicParsing="false" text="Play Raffle 5 times">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <Text layoutX="325.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Black Jack Expert" textAlignment="CENTER" wrappingWidth="350.0">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="ck3000" layoutX="337.0" layoutY="513.0" mnemonicParsing="false" text="Money reach $3000">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tk10" layoutX="337.0" layoutY="548.0" mnemonicParsing="false" text="Use 10 Tickets">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="gdm" layoutX="559.0" layoutY="548.0" mnemonicParsing="false" text="Earn Golden Medal">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="allM" layoutX="559.0" layoutY="726.0" mnemonicParsing="false" text="Earn Diamond Medals" textFill="RED">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tk30" layoutX="337.0" layoutY="726.0" mnemonicParsing="false" text="Use 30 Tickets">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="ck5000" layoutX="337.0" layoutY="691.0" mnemonicParsing="false" text="Money reach $5000">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <Text layoutX="325.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Master" textAlignment="CENTER" wrappingWidth="350.0">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="rf10" layoutX="559.0" layoutY="694.0" mnemonicParsing="false" text="Play Raffle 10 times">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bzm" layoutX="559.0" layoutY="380.0" mnemonicParsing="false" text="Earn Bronze Medal">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="Bronze" fitHeight="50.0" fitWidth="50.0" layoutX="18.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Gold" fitHeight="50.0" fitWidth="50.0" layoutX="18.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Diamond" fitHeight="50.0" fitWidth="50.0" layoutX="18.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="c1" fitHeight="70.0" fitWidth="70.0" layoutX="81.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fill="#f2ff00" layoutX="68.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collection" underline="true">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="c2" fitHeight="70.0" fitWidth="70.0" layoutX="5.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="c3" fitHeight="70.0" fitWidth="70.0" layoutX="156.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="smallLog" layoutX="15.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font></Text>
+      <TextArea fx:id="notes" layoutX="16.0" layoutY="440.0" prefHeight="164.0" prefWidth="200.0">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </TextArea>
+   </children>
 </AnchorPane>
-

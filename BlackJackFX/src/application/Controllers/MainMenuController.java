@@ -53,8 +53,8 @@ public class MainMenuController {
 			window.show();
 		}
 		
-		if(source == achievementsB) { //Takes you to the achievements page.
-			URL url = new File("src/application/View/Achievements.fxml").toURI().toURL(); //Put the right FXML page name if needed.
+		if(source == achievementsB) { //Takes you to the achievement page.
+			URL url = new File("src/application/View/Achievement.fxml").toURI().toURL(); //Put the right FXML page name if needed.
 			mainPane = FXMLLoader.load(url);
 			Scene scene = new Scene(mainPane);
 			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
