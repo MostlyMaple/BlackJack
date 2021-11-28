@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: darkgreen;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.MainMenuController">
+   <children>
+      <ImageView fitHeight="161.0" fitWidth="198.0">
+         <image>
+            <Image url="@../../BlackJackImages/blackjack.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="651.0" layoutX="-1.0" layoutY="159.0" stroke="BLACK" width="203.0" AnchorPane.leftAnchor="-1.5">
+         <effect>
+            <InnerShadow choke="0.28" color="#084018" height="0.0" radius="8.4575" width="35.83" />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.007662835249042145" />
+                  <Stop color="#0d4626" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="161.0" layoutX="195.0" stroke="BLACK" width="607.0">
+         <effect>
+            <InnerShadow choke="0.28" height="26.875" radius="15.17625" width="35.83" />
+         </effect>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#0d4626" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="652.0" fitWidth="607.0" layoutX="196.0" layoutY="160.0">
+         <image>
+            <Image url="@../../BlackJackImages/klim-musalimov-P9BtSqfwZNU-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="playB" alignment="CENTER" layoutX="26.0" layoutY="218.0" mnemonicParsing="false" onAction="#handle" prefHeight="70.0" prefWidth="150.0" text="Play" textAlignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Button>
+      <Button fx:id="storeB" alignment="CENTER" layoutX="26.0" layoutY="377.0" mnemonicParsing="false" onAction="#handle" prefHeight="70.0" prefWidth="150.0" text="Store" textAlignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Button>
+      <Button fx:id="achievementsB" alignment="CENTER" layoutX="26.0" layoutY="528.0" mnemonicParsing="false" onAction="#handle" prefHeight="70.0" prefWidth="150.0" text="Achievements" textAlignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="settingsB" alignment="CENTER" layoutX="26.0" layoutY="686.0" mnemonicParsing="false" onAction="#handle" prefHeight="70.0" prefWidth="150.0" text="Settings" textAlignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <InnerShadow choke="0.12" radius="10.7425" width="23.97" />
+   </effect>
+</AnchorPane>
