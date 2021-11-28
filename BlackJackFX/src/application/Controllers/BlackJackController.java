@@ -1,9 +1,8 @@
 package application.Controllers;
 
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
+
 import application.Main;
 import application.Models.BlackJack;
 import javafx.event.ActionEvent;
@@ -27,6 +26,9 @@ public class BlackJackController {
 	final int HIDDEN = 1;
 	final int NOT_HIDDEN = 0;
 	int curWager = 0;
+	
+	@FXML
+	private AnchorPane mainPane;
 	
     @FXML
     private ImageView table;
@@ -157,16 +159,22 @@ public class BlackJackController {
     @FXML
     private Button betHundredPerBtn;
     
-    @FXML
-    private AnchorPane mainPane;
-    
+    /* Method Name: initialize
+	 * Return type: void
+	 * Parameters: None
+	 * Description: Set all labels and hide labels that should be hidden.
+	 */
     @FXML
     public void initialize() {
     	setLabels(HIDDEN);
     }
     
     
-    
+    /* Method Name: hitUser
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Give the user another card upon button press.
+	 */
     @FXML
     void hitUser(ActionEvent event) {
     	if (game.isGameStarted() && !game.isUserStayed()) {
@@ -187,6 +195,13 @@ public class BlackJackController {
     	}
     }
 
+    
+    /* Method Name: stayUser
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Checks whether the user has a higher, lower, or equal card value than the dealer and 
+	 * distributes balance accordingly.
+	 */
     @FXML
     void stayUser(ActionEvent event) {
     	int result;
@@ -203,9 +218,14 @@ public class BlackJackController {
     					bustLbl.setText("You Lose!");
     					setLabels(NOT_HIDDEN);
     					curWager = 0;
-    				} else {
+    				} else if (result == 1){
     					bustLbl.setText("You Win!");
     					Main.balance = Main.balance + curWager * 2;
+    					curWager = 0;
+    					setLabels(NOT_HIDDEN);
+    				} else {
+    					bustLbl.setText("You Tie!");
+    					Main.balance = Main.balance + curWager;
     					curWager = 0;
     					setLabels(NOT_HIDDEN);
     				}
@@ -220,6 +240,12 @@ public class BlackJackController {
     	}
     }
 
+    
+    /* Method Name: startGame
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Stops the user from betting during the game by setting a game start variable.
+	 */
     @FXML
     void startGame(ActionEvent event) {
     	if (!game.isGameStarted() && curWager > 0) {
@@ -227,12 +253,17 @@ public class BlackJackController {
     		Main.balance = Main.balance - curWager;
     		game = new BlackJack();
     		game.deal();
+    		Main.ticket = Main.ticket + 1;
     		setLabels(HIDDEN);
     		game.setGameStarted(true);
     	}
     }
     
-    
+    /* Method Name: setLabels
+	 * Return type: void
+	 * Parameters: int dealerHidden
+	 * Description: Update all screen information to match the stored variables.
+	 */
     void setLabels(int dealerHidden) {
     	int[] userTotal = new int[2];
     	int[] dealerTotal = new int[2];
@@ -263,7 +294,11 @@ public class BlackJackController {
     	setDealerCards(dealerHidden);
     }
     
-    
+    /* Method Name: setUserCards
+	 * Return type: void
+	 * Parameters: None
+	 * Description: Takes user card info and finds the image that matches the card and sets it on the screen.
+	 */
     void setUserCards() {
     	Image[] cardImage = new Image[12];
     	String cardName;
@@ -346,7 +381,11 @@ public class BlackJackController {
     	}
     }
     
-    
+    /* Method Name: setDealerCards
+	 * Return type: void
+	 * Parameters: int hidden
+	 * Description: Takes dealer card info and finds the image that matches the card and sets it on the screen.
+	 */
     void setDealerCards(int hidden) {
     	Image[] cardImage = new Image[12];
     	String backOfCard = "BlackJackImages/Card-Back-05.png";
@@ -435,6 +474,11 @@ public class BlackJackController {
     	}
     }
     
+    /* Method Name: reset
+	 * Return type: void
+	 * Parameters: None
+	 * Description: Sets all cards to invisible and resets the game object.
+	 */
     void reset() {
     	game = new BlackJack();
 		dealerCard0.setVisible(false);
@@ -464,6 +508,11 @@ public class BlackJackController {
 		setLabels(HIDDEN);
     }
     
+    /* Method Name: betCustom
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Reads in a custom integer value to bet.
+	 */
     @FXML
     void betCustom(ActionEvent event) {
     	String betAmount = manualBet.getText();
@@ -472,7 +521,7 @@ public class BlackJackController {
     	if (!game.isGameStarted()) {
     		try {
     			strToInt = Integer.parseInt(betAmount);
-    			if (strToInt <= Main.balance) {
+    			if (strToInt <= Main.balance && strToInt > 0) {
     				curWager = strToInt;
     				setLabels(HIDDEN);
     			}
@@ -482,6 +531,11 @@ public class BlackJackController {
     	}
     }
     
+    /* Method Name: betOne
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Adds 1 to wager total.
+	 */
     @FXML
     void betOne(ActionEvent event) {
     	reset();
@@ -494,6 +548,11 @@ public class BlackJackController {
     	}
     }
 
+    /* Method Name: betFive
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Adds 5 to wager total.
+	 */
     @FXML
     void betFive(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -506,6 +565,12 @@ public class BlackJackController {
     	}
     }
 
+    
+    /* Method Name: betTwentyFive
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Adds 1 to wager total.
+	 */
     @FXML
     void betTwentyFive(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -518,6 +583,12 @@ public class BlackJackController {
     	}
     }
 
+    
+    /* Method Name: betHundred
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Adds 100 to wager total.
+	 */
     @FXML
     void betHundred(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -530,6 +601,11 @@ public class BlackJackController {
     	}
     }
     
+    /* Method Name: betTenPer
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Sets wager to 10% of balance.
+	 */
     @FXML
     void betTenPer(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -540,6 +616,11 @@ public class BlackJackController {
     	}
     }
 
+    /* Method Name: betTwentyPer
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Sets wager to 25% of balance.
+	 */
     @FXML
     void betTwentyPer(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -550,6 +631,11 @@ public class BlackJackController {
     	}
     }
 
+    /* Method Name: betFiftyPer
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Sets wager to 50% of balance.
+	 */
     @FXML
     void betFiftyPer(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -560,6 +646,11 @@ public class BlackJackController {
     	}
     }
 
+    /* Method Name: betHundredPer
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Sets wager to 100% of balance.
+	 */
     @FXML
     void betHundredPer(ActionEvent event) {
     	setLabels(HIDDEN);
@@ -569,18 +660,24 @@ public class BlackJackController {
     			setLabels(HIDDEN);
     	}
     }
-
+    
+    
+    /* Method Name: mainMenu
+	 * Return type: void
+	 * Parameters: ActionEvent event
+	 * Description: Switches window back to main menu.
+	 */
     @FXML
-    void BackToMainMenu(ActionEvent event) throws IOException {
-		URL url = new File("src/application/View/MainMenu.fxml").toURI().toURL();
-		mainPane = FXMLLoader.load(url);
+    void mainMenu(ActionEvent event) throws IOException{
+		mainPane = FXMLLoader.load(getClass().getResource("/application/View/MainMenu.fxml"));
 		Scene scene = new Scene(mainPane);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		boolean isFullscreen = window.isFullScreen();
 		window.setScene(scene);
 		window.setFullScreen(isFullscreen);
 		window.show();
-    }  
+    }
+
 }
 
 

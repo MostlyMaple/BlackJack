@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.BlackJackController">
+<AnchorPane style="-fx-background-color: #35654d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.BlackJackController">
    <children>
-      <AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #35654d;">
+      <AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #35654d;">
          <children>
             <ImageView fx:id="table" fitHeight="648.0" fitWidth="900.0" layoutX="-3.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="1.3">
                <image>
@@ -250,9 +250,9 @@
                   <Font name="Arial Bold" size="87.0" />
                </font>
             </Label>
-            <Button fx:id="backB" layoutX="733.0" layoutY="763.0" mnemonicParsing="false" onAction="#BackToMainMenu" text="Quit">
+            <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: red;" text="Back">
                <font>
-                  <Font name="System Bold Italic" size="12.0" />
+                  <Font name="Berlin Sans FB Bold" size="12.0" />
                </font>
             </Button>
          </children>

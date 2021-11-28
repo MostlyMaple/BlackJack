@@ -131,17 +131,17 @@ public class RaffleTask implements Runnable {
 					this.txt.appendText("You Got Bronze Medal\n");
 					break;
 				case 3:
-					this.txt.appendText("You Got Red Heard:\n  + 100 Money\n");
+					this.txt.appendText("You Got Red Heart:\n  + 100 Money\n");
 					Main.balance += 100;
 					this.balance.setText(String.valueOf(Main.balance));
 					break;
 				case 4:
-					this.txt.appendText("You Got Black Heard:\n  + 1 Ticket\n");
+					this.txt.appendText("You Got Black Heart:\n  + 1 Ticket\n");
 					Main.ticket += 1;
 					this.ticketNum.setText(String.valueOf(Main.ticket));
 					break;
 				case 5:
-					this.txt.appendText("You Got Bitton Coin!\n  + 500 Money\n");
+					this.txt.appendText("You Got BitCoin!\n  + 500 Money\n");
 					Main.balance += 500;
 					this.balance.setText(String.valueOf(Main.balance));
 					break;

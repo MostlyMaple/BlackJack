@@ -11,6 +11,9 @@ public class Main extends Application {
 	
 	
 	public static int balance = 1000;
+	public static int ticket = 5;
+	public static String buff = "";
+	public static int raffleCounter = 0;
 	
 	@Override
 	public void start(Stage primaryStage) {

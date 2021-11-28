@@ -32,7 +32,23 @@ public class MainMenuController {
 		Object source = event.getSource();
 		
 		if(source == playB) { //Takes you to play Blackjack.
-			URL url = new File("src/application/View/BlackJack.fxml").toURI().toURL();
+			mainPane = FXMLLoader.load(getClass().getResource("/application/View/BlackJack.fxml"));
+			Scene scene = new Scene(mainPane);
+			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			boolean isFullscreen = window.isFullScreen();
+			window.setScene(scene);
+			window.setFullScreen(isFullscreen);
+			window.show();
+		}else if(source == storeB) { //Takes you to the store page.
+			mainPane = FXMLLoader.load(getClass().getResource("/application/View/Store.fxml"));
+			Scene scene = new Scene(mainPane);
+			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			boolean isFullscreen = window.isFullScreen();
+			window.setScene(scene);
+			window.setFullScreen(isFullscreen);
+			window.show();
+		}else if(source == achievementsB) { //Takes you to the achievements page.
+			URL url = new File("src/application/View/Achievement.fxml").toURI().toURL(); //Put the right FXML page name if needed.
 			mainPane = FXMLLoader.load(url);
 			Scene scene = new Scene(mainPane);
 			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -40,31 +56,7 @@ public class MainMenuController {
 			window.setScene(scene);
 			window.setFullScreen(isFullscreen);
 			window.show();
-		}
-		
-		if(source == storeB) { //Takes you to the store page.
-			URL url = new File("src/application/View/Store.fxml").toURI().toURL(); //Put the right FXML page name if needed.
-			mainPane = FXMLLoader.load(url);
-			Scene scene = new Scene(mainPane);
-			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-			boolean isFullscreen = window.isFullScreen();
-			window.setScene(scene);
-			window.setFullScreen(isFullscreen);
-			window.show();
-		}
-		
-		if(source == achievementsB) { //Takes you to the achievements page.
-			URL url = new File("src/application/View/Achievements.fxml").toURI().toURL(); //Put the right FXML page name if needed.
-			mainPane = FXMLLoader.load(url);
-			Scene scene = new Scene(mainPane);
-			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-			boolean isFullscreen = window.isFullScreen();
-			window.setScene(scene);
-			window.setFullScreen(isFullscreen);
-			window.show();
-		}
-		
-		else { //Takes you to the settings page.
+		} else { //Takes you to the settings page.
 			URL url = new File("src/application/View/Settings.fxml").toURI().toURL();
 			mainPane = FXMLLoader.load(url);
 			Scene scene = new Scene(mainPane);

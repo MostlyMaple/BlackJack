@@ -81,12 +81,12 @@ public class AchieveController implements Initializable {
 	 */
 	@FXML
     public void backSwitch(ActionEvent event) throws IOException {
-		// save informatino 
+		// save information
 		Main.buff = notes.getText();
 		
 		// load the role view
 		FXMLLoader loader = new FXMLLoader();
-		URL url = getClass().getResource("/application/View/BlackJack.fxml");
+		URL url = getClass().getResource("/application/View/MainMenu.fxml");
 		loader.setLocation(url);
 		blackJack = loader.load();
         Scene scene = new Scene(blackJack);
@@ -223,6 +223,7 @@ public class AchieveController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		ticketNum.setText(String.valueOf(Main.ticket));
 		notes.setText(Main.buff);
+		balance.setText(Integer.toString(Main.balance));
 		ck1500.setDisable(true);
 		ck2000.setDisable(true);
 		ck3000.setDisable(true);
