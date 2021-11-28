@@ -54,7 +54,7 @@ public class StoreController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
     	//confirmBuyText.setText("Click on image to buy!");
-    	totalBalanceText.setText("Current balance " + Main.balance);
+    	totalBalanceText.setText("Current balance: $" + Main.balance);
 		
 	}
 
@@ -62,7 +62,7 @@ public class StoreController implements Initializable {
     void imageClicked(MouseEvent event)  {
     	if(event.getPickResult().getIntersectedNode().getId().compareTo("tree")==0) {
     		
-    		confirmBuyText.setText("Are you sure you want to buy the tree");
+    		confirmBuyText.setText("Are you sure you want to buy the tree?");
     
     		//if confirm button clicked
     		confirmBuyButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -76,6 +76,7 @@ public class StoreController implements Initializable {
 					else {
 						Main.balance = Main.balance - 200;
 						totalBalanceText.setText("New Balance:" + Main.balance);
+						confirmBuyText.setText("Merry Christmas!");
 					}
 				}
     			
@@ -85,7 +86,7 @@ public class StoreController implements Initializable {
     		
     	}
     	else if(event.getPickResult().getIntersectedNode().getId().compareTo("dog")==0) {
-    		confirmBuyText.setText("Are you sure you want to buy the dog");
+    		confirmBuyText.setText("Are you sure you want to buy the dog?");
     		
     		//if confirm button clicked
     		confirmBuyButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -94,11 +95,12 @@ public class StoreController implements Initializable {
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
 					if(Main.balance - 400 < 0) {
-						confirmBuyText.setText("You're not that rich :(");
+						confirmBuyText.setText("You do not have enough money in your balance to buy the dog");
 					}
 					else {
 						Main.balance = Main.balance - 400;
 						totalBalanceText.setText("New Balance:" + Main.balance);
+						confirmBuyText.setText("Congrats on the new dog!");
 					}
 				}
     			
@@ -111,7 +113,7 @@ public class StoreController implements Initializable {
     		
     	}
     	else if(event.getPickResult().getIntersectedNode().getId().compareTo("monkey")==0) {
-    		confirmBuyText.setText("Are you sure you want to buy the monkey");
+    		confirmBuyText.setText("Are you sure you want to buy the monkey?");
     		
     		//if confirm button clicked
     		confirmBuyButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -120,11 +122,12 @@ public class StoreController implements Initializable {
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
 					if(Main.balance - 500 < 0) {
-						confirmBuyText.setText("You're not that rich :(");
+						confirmBuyText.setText("You do not have enough money in your balance to buy the monkey");
 					}
 					else {
 						Main.balance = Main.balance - 500;
 						totalBalanceText.setText("New Balance:" + Main.balance);
+						confirmBuyText.setText("Congrats on the new monkey!");
 					}
 				}
     			
@@ -135,7 +138,7 @@ public class StoreController implements Initializable {
     		
     	}
     	else if(event.getPickResult().getIntersectedNode().getId().compareTo("food")==0) {
-    		confirmBuyText.setText("Are you sure you want to buy the food");
+    		confirmBuyText.setText("Are you sure you want to buy the meal?");
     		
     		//if confirm button clicked
     		confirmBuyButton.setOnAction(new EventHandler<ActionEvent>(){
@@ -144,11 +147,12 @@ public class StoreController implements Initializable {
 				public void handle(ActionEvent event) {
 					// TODO Auto-generated method stub
 					if(Main.balance - 100 < 0) {
-						confirmBuyText.setText("You're not that rich :(");
+						confirmBuyText.setText("You do not have enough money in your balance to buy the meal");
 					}
 					else {
 						Main.balance = Main.balance - 100;
 						totalBalanceText.setText("New Balance:" + Main.balance);
+						confirmBuyText.setText("Enjoy your food!");
 					}
 		    		
 				}
