@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -10,12 +11,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: green; -fx-border-color: #DEB887;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.StoreController">
    <children>
-      <Label layoutX="327.0" layoutY="26.0" prefHeight="62.0" prefWidth="196.0" text="STORE" textAlignment="RIGHT" textFill="#dd6c1b">
-         <font>
-            <Font name="Georgia" size="52.0" />
-         </font>
-      </Label>
-      <Button fx:id="mainMenuButton" layoutX="598.0" layoutY="39.0" mnemonicParsing="false" onAction="#mainMenuHandle" prefHeight="41.0" prefWidth="153.0" text="Main Menu">
+      <Button fx:id="mainMenuButton" layoutX="598.0" layoutY="39.0" mnemonicParsing="false" onAction="#mainMenuHandle" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #ff9300;" text="Main Menu">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
@@ -34,17 +30,17 @@
             <Font name="Didot Bold" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="242.0" layoutY="350.0" prefHeight="62.0" prefWidth="101.0" text="\$200" textFill="WHITE">
+      <Label layoutX="261.0" layoutY="350.0" prefHeight="62.0" prefWidth="101.0" text="\$200" textFill="WHITE">
          <font>
             <Font name="Didot Bold" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="434.0" layoutY="356.0" prefHeight="55.0" prefWidth="68.0" text="\$500" textFill="WHITE">
+      <Label layoutX="444.0" layoutY="354.0" prefHeight="55.0" prefWidth="68.0" text="\$500" textFill="WHITE">
          <font>
             <Font name="Didot Bold" size="21.0" />
          </font>
       </Label>
-      <Button fx:id="confirmBuyButton" layoutX="325.0" layoutY="595.0" mnemonicParsing="false" style="-fx-background-color: lightgreen;" text="Confirm buy">
+      <Button fx:id="confirmBuyButton" layoutX="325.0" layoutY="595.0" mnemonicParsing="false" style="-fx-background-color: #77b293;" text="Confirm buy">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
@@ -67,7 +63,7 @@
             </ImageView>
          </children>
       </HBox>
-      <HBox layoutX="379.0" layoutY="208.0" prefHeight="116.0" prefWidth="130.0">
+      <HBox layoutX="385.0" layoutY="200.0" prefHeight="116.0" prefWidth="130.0">
          <children>
             <ImageView fx:id="monkey" fitHeight="179.0" fitWidth="193.0" onMouseClicked="#imageClicked" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -89,7 +85,7 @@
             <Font name="Arial Rounded MT Bold" size="19.0" />
          </font>
       </TextArea>
-      <Label layoutX="335.0" layoutY="79.0" prefHeight="22.0" prefWidth="169.0" text="Click Image to buy!" textFill="#f2eded">
+      <Label layoutX="59.0" layoutY="73.0" prefHeight="22.0" prefWidth="169.0" text="Click image to buy!" textFill="#ff9300">
          <font>
             <Font name="Arial Rounded MT Bold" size="17.0" />
          </font>
@@ -111,16 +107,24 @@
             <Font name="Georgia" size="24.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="45.0" layoutX="390.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-      <Text layoutX="355.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONKEY" textAlignment="CENTER" wrappingWidth="245.79373168945312">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="45.0" layoutX="387.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+      <Text layoutX="346.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONKEY" textAlignment="CENTER" wrappingWidth="245.79373168945312">
          <font>
             <Font name="Georgia" size="24.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="45.0" layoutX="586.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-      <Text layoutX="537.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEAL" textAlignment="CENTER" wrappingWidth="245.79373168945312">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#77b293" height="45.0" layoutX="575.0" layoutY="156.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+      <Text layoutX="532.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEAL" textAlignment="CENTER" wrappingWidth="245.79373168945312">
          <font>
             <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff9300" layoutX="337.0" layoutY="64.0" stroke="#070707" text="Store" wrappingWidth="166.70257568359375">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Georgia Bold" size="56.0" />
          </font>
       </Text>
    </children>
