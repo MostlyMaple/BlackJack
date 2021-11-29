@@ -1,3 +1,10 @@
+/* 
+ * The MainMenuController has a button for each of the views.
+ * It uses the handle method with a source object to know
+ * which button is pressed. Then the view gets changed to 
+ * whatever button the user pressed.
+ */
+
 package application.Controllers;
 
 import java.io.File;
@@ -14,22 +21,22 @@ import javafx.stage.Stage;
 
 public class MainMenuController {
 	@FXML
-	private Button playB;
+	private Button playB; //play button.
 	
 	@FXML
-	private Button storeB;
+	private Button storeB; //store button.
 	
 	@FXML
-	private Button achievementsB;
+	private Button achievementsB; //achievements button.
 	
 	@FXML
-	private Button settingsB;
+	private Button settingsB; //settings button.
 	
 	@FXML
 	private AnchorPane mainPane;
 	
 	public void handle(ActionEvent event) throws IOException{
-		Object source = event.getSource();
+		Object source = event.getSource(); //Used to know which button is pressed.
 		
 		if(source == playB) { //Takes you to play Blackjack.
 			mainPane = FXMLLoader.load(getClass().getResource("/application/View/BlackJack.fxml"));
@@ -66,5 +73,5 @@ public class MainMenuController {
 			window.setFullScreen(isFullscreen);
 			window.show();
 		}
-	}
-}
+	} //End of handle method.
+} //End of MainMenuController class.
