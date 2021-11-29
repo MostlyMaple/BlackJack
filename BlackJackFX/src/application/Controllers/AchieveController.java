@@ -22,6 +22,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * AchieveController is a Controller class that shows goals for the user to achieve and allows the user to check
+ * if they have completed the goals. It also allows the user to raffle off tickets to earn prizes for playing the game.
+ * 
+ * UTSA CS 3443 - Final Project
+ * Fall 2021
+ */
+
 public class AchieveController implements Initializable {
 	
 	@FXML

@@ -1,4 +1,7 @@
 package application.Controllers;
+/**
+ * Sample Skeleton for 'Settings.fxml' Controller Class
+ */
 
 import java.io.IOException;
 import java.net.URL;
@@ -40,28 +43,19 @@ public class SettingsController implements Initializable{
       window.setFullScreen(isFullscreen);
       window.show();
     }
-    
-    /* 
-     * Makes the window fullscreen ticking the "fullscreen" box.
-     */
+
     @FXML
     void toggleFullscreen(ActionEvent event) {
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setFullScreen(btn_fullscreen.isSelected());
     }
-    
-    /*
-     * Is run when the scene starts up.
-     */
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
-		//Populates the choicebox with different resolutions.
 		choiceBox_Resolution.getItems().removeAll(choiceBox_Resolution.getItems());
 		choiceBox_Resolution.getItems().addAll("1920×1080","1600×1280","1600×1200", "1680×1050", "1024×768", "960×540", "800×600");
-		
-		// Ensures that when a choice is selected, the window is updated to the correct dimensions.
 		choiceBox_Resolution.setOnAction((event)-> {
 			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	    	switch(choiceBox_Resolution.getValue().toString()) {

@@ -18,6 +18,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+/**
+ * BlackJackController is a Controller class that takes in user input based on the buttons on screen and allows the user
+ * to play BlackJack.
+ * 
+ * UTSA CS 3443 - Final Project
+ * Fall 2021
+ */
+
+
 public class BlackJackController {
 	
 	BlackJack game = new BlackJack();

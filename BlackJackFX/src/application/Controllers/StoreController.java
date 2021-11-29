@@ -19,6 +19,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+/**
+ * StoreController is a Controller class that shows items that the player can purchase with their balance.
+ * 
+ * UTSA CS 3443 - Final Project
+ * Fall 2021
+ */
+
 public class StoreController implements Initializable {
 
 	@FXML

@@ -8,6 +8,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+/**
+ * RaffleTask is a Model class that generates a random reward from using raffle tickets.
+ * 
+ * UTSA CS 3443 - Final Project
+ * Fall 2021
+ */
+
 public class RaffleTask implements Runnable {
 	
 	ImageView igv;
@@ -158,7 +165,6 @@ public class RaffleTask implements Runnable {
 	}
 	
 }
-
 
 
 

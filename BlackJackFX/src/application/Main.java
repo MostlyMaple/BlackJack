@@ -6,6 +6,13 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * Main is a Java class that starts the application and holds some global variables.
+ * 
+ * UTSA CS 3443 - Final Project
+ * Fall 2021
+ */
+
 
 public class Main extends Application {
 	
@@ -15,6 +22,12 @@ public class Main extends Application {
 	public static String buff = "";
 	public static int raffleCounter = 0;
 	
+	
+	/* Method Name: start
+	 * Return type: void
+	 * Parameters: None
+	 * Description: Declares an AnchorPane and loads the .fxml file. Then Declares a scene and loads it onto a stage.
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -28,7 +41,13 @@ public class Main extends Application {
 		}
 	}
 	
+	/* Method Name: Main
+	 * Return type: void
+	 * Parameters: None
+	 * Description: Launches the application
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
 }
+-
